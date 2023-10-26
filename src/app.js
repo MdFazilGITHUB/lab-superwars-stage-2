@@ -52,17 +52,18 @@ const getRandomStrength = () => {
     return Strength
 }
 
-const buildPlayers = (players, parameter) => { // for seperating heroes and villains
+const buildPlayers = (players, type) => { // for seperating heroes and villains
     let fragment = '';
     for(let i=0;i<players.length;i++){
-        if(players[i].type == parameter){
+        if(players[i].type == type){
             // console.log(players[i].type)
             fragment += `<div class="player">
-                        <img src="${players[i].image}" alt="">
-                        <div class="name">${players[i].name}</div>
-                        <div class="strength">${players[i].strength}</div>
-                        </div>
-         `
+            <img src="${players[i].image}" alt="">
+            <div class="name">${players[i].name}</div>
+            <div class="strength">${players[i].strength}</div>
+            </div>
+            `
+            console.log("fragment: ", fragment);
             
         }
         
