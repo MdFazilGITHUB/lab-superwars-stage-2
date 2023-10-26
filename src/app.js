@@ -54,8 +54,6 @@ const getRandomStrength = () => {
 
 const buildPlayers = (players, parameter) => { // for seperating heroes and villains
     let fragment = '';
-
-
     for(let i=0;i<players.length;i++){
         if(players[i].type == parameter){
             // console.log(players[i].type)
